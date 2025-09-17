@@ -276,3 +276,78 @@ body {
         font-size: 2.5rem;
     }
 }
+/* --- Projects Section Styles --- */
+.projects-section {
+    padding: 100px 50px;
+    background-color: #1a1a1a; /* Matching dark background */
+    text-align: center;
+}
+
+.projects-section h2 {
+    font-size: 3rem;
+    margin-bottom: 60px;
+    font-weight: 700;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: #222222; /* Card background */
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #f1f1f1;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #cccccc;
+    flex-grow: 1; /* Pushes the button to the bottom */
+    margin-bottom: 25px;
+}
+
+.project-button {
+    display: inline-block;
+    background-color: rgb(134, 0, 134);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.project-button:hover {
+    background-color: rgb(110, 0, 110); /* Darker purple on hover */
+}
+
+/* --- Responsive Adjustments for Projects --- */
+@media (max-width: 768px) {
+    .projects-section {
+        padding: 80px 20px;
+    }
+    .projects-section h2 {
+        font-size: 2.5rem;
+    }
+}
