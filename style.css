@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  scroll-behavior: smooth; /* Added for smooth scrolling */
+  scroll-behavior: smooth;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -13,35 +13,31 @@ html {
     font-size: 100%;
     vertical-align: baseline;
     background: transparent;
-    font-family: sans-serif; /* Added a default font */
-    line-height: 1.6; /* Improves readability */
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
 }
 
-/* Base Purple Color Variable for easy changes */
-:root {
-    --primary-purple: rgb(134, 0, 134);
-    --dark-bg: #1a1a1a; /* Dark background color for sections */
+body {
+    background-color: #1a1a1a;
+    color: #f1f1f1;
 }
 
-/* --- Global Styles --- */
-.highlight {
-    color: var(--primary-purple);
-}
-
-.hire button, .lets-talk-button { /* Applied to both buttons for consistency */
-    background-color: var(--primary-purple);
+.hire button, .lets-talk-button {
+    background-color: rgb(134, 0, 134);
     color: white;
     padding: 10px 20px;
     border-radius: 20px;
     cursor: pointer;
     font-size: 1rem;
-    border: none; /* Remove default button border */
+    border: none;
+    transition: transform 0.3s ease;
 }
 
+.hire button:hover, .lets-talk-button:hover {
+    transform: scale(1.05);
+}
 
-/* --- Arnav (Hero) Section Styles --- */
 .arnav {
-  /* Set an ID for the home section to link to */
   background-image: url("./images/portfoliopic.png");
   background-size: cover;         
   background-position: center 25%;  
@@ -50,7 +46,6 @@ html {
   flex-direction: column;   
   color: white;
   width: 100%;
-  /* Removed ID from CSS, added to HTML for clarity */
 }
 
 .navbar {
@@ -65,6 +60,11 @@ html {
     font-size: 1.5rem;
 }
 
+
+.navbar h3 span {
+    color: rgb(134, 0, 134);
+}
+
 .pages {
   display: flex;
   gap: 20px; 
@@ -75,35 +75,38 @@ html {
   cursor: pointer;
 }
 
-.pages a { /* Style for the links in the navbar */
+.pages a {
     color: white;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .pages a:hover {
-    color: var(--primary-purple);
+    color: rgb(134, 0, 134);
 }
 
-
-/* Hero Text & Form Styles */
 .name-text {
     padding: 80px 50px; 
-    flex-grow: 1; /* Allows text to push content to the bottom if needed */
-    display: flex; /* Helps center vertically */
+    flex-grow: 1;
+    display: flex;
     flex-direction: column;
-    justify-content: center; /* Vertically center content if space allows */
+    justify-content: center;
 }
 
 .name-text p {
     font-size: 1.2rem;
-    margin-bottom: 5px; /* Reduced margin */
+    margin-bottom: 5px;
 }
 
 .name-text h1 {
     font-size: 4rem;
     font-weight: bold;
-    margin-bottom: 5px; /* Reduced margin */
+    margin-bottom: 5px;
+}
+
+/* Style for "Agrawal" in the name */
+.name-text h1 span {
+    color: rgb(134, 0, 134);
 }
 
 .name-text .domain {
@@ -125,11 +128,11 @@ html {
     color: #333;
     font-size: 1rem;
     border: none;
-    background: none; /* Make input background transparent within the white form box */
+    background: none;
 }
 
 .email-form button {
-    background-color: var(--primary-purple);
+    background-color: rgb(134, 0, 134);
     color: white;
     padding: 10px 25px;
     border-radius: 30px;
@@ -138,18 +141,17 @@ html {
     border: none;
 }
 
-/* --- About Me Section Styles --- */
 .about-me-section {
-    background-color: var(--dark-bg); /* Dark background for this section */
+    background-color: #1a1a1a;
     color: white;
     display: flex;
-    min-height: 100vh; /* Make section at least full viewport height */
-    align-items: center; /* Vertically align content */
-    padding: 50px 0; /* Add some vertical padding */
+    min-height: 100vh;
+    align-items: center;
+    padding: 50px 0;
 }
 
 .about-me-image-container {
-    flex: 1; /* Takes up one part of the flexible space */
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -157,16 +159,16 @@ html {
 }
 
 .about-me-img {
-    max-width: 80%; /* Ensure image scales down */
+    max-width: 80%;
     height: auto;
-    border-radius: 5px; /* Slightly rounded corners for the image */
-    display: block; /* Remove extra space below image */
+    border-radius: 5px;
+    display: block;
 }
 
 .about-arnav {
-    flex: 1.5; /* Takes up more space than the image */
+    flex: 1.5;
     padding: 20px 50px;
-    max-width: 600px; /* Limit text width for readability */
+    max-width: 600px;
 }
 
 .about-arnav h2 {
@@ -175,7 +177,7 @@ html {
 }
 
 .about-arnav .subheading {
-    color: var(--primary-purple); /* Subheading in purple */
+    color: rgb(134, 0, 134);
     font-size: 1.2rem;
     margin-bottom: 20px;
 }
@@ -184,29 +186,58 @@ html {
     font-size: 1rem;
     margin-bottom: 30px;
     text-align: justify; 
+    color: #cccccc;
 }
 
 .lets-talk-button {
-    padding: 12px 30px; /* Slightly larger button */
-    border-radius: 30px; /* More rounded button */
+    padding: 12px 30px;
+    border-radius: 30px;
 }
 
-/* Optional: Basic Responsive Adjustments */
+.skills-section {
+    padding: 100px 50px;
+    background-color: #222222;
+    text-align: center;
+}
+
+.skills-section h2 {
+    font-size: 3rem;
+    margin-bottom: 60px;
+    font-weight: 700;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-10px);
+}
+
+.skill-item img {
+    width: 80px;
+    height: 80px;
+}
+
+.skill-item p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #cccccc;
+}
+
 @media (max-width: 768px) {
-    .about-me-section {
-        flex-direction: column; /* Stack image and content vertically on smaller screens */
-        text-align: center;
-    }
-
-    .about-me-image-container {
-        max-width: 80%;
-    }
-    
-    .about-arnav {
-        padding: 20px 30px;
-        max-width: 100%;
-    }
-
     .navbar {
         flex-direction: column;
         gap: 15px;
@@ -218,6 +249,7 @@ html {
     .name-text {
         padding: 50px 30px;
         text-align: center;
+        align-items: center;
     }
     .name-text h1 {
         font-size: 3rem;
@@ -225,5 +257,22 @@ html {
     .email-form {
         max-width: 100%;
         margin: 0 auto; 
+    }
+    .about-me-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-me-image-container {
+        max-width: 80%;
+    }
+    .about-arnav {
+        padding: 20px 30px;
+        max-width: 100%;
+    }
+    .skills-section {
+        padding: 80px 20px;
+    }
+    .skills-section h2 {
+        font-size: 2.5rem;
     }
 }
