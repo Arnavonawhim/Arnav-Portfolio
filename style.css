@@ -1,0 +1,79 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    font-family: sans-serif; /* Added a default font */
+}
+
+.arnav {
+  background-image: url("./images/portfoliopic.png");
+  background-size: cover;         
+  background-position: center 25%;  
+  height: 100vh; /* Changed to fill the viewport height */
+  display: flex;
+  flex-direction: column;   
+  color: white;
+  width: 100%;
+}
+
+.navbar {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  width: 100%;
+  padding: 20px 50px; 
+}
+
+.pages {
+  display: flex;
+  gap: 20px; 
+}
+
+.pages h4 {
+  margin: 0;
+  cursor: pointer;
+}
+
+/* --- Added and Updated Styles --- */
+.highlight {
+    color: rgb(134, 0, 134);
+}
+
+.hire button {
+    background-color: rgb(134, 0, 134);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Hero Text & Form Styles */
+.name-text {
+    padding: 80px 50px; /* Pushes content down and from the left */
+}
+
+.name-text p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.name-text h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.name-text .domain {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
